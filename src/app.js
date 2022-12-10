@@ -1,7 +1,11 @@
-import { Express } from "express";
+import express from "express";
+import routes from "./routes/index.js"
 
-const app = Express();
+const app = express();
 
+app.use(express.json());
+
+routes(app)
 
 
 export default app;
